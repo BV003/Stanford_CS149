@@ -174,7 +174,7 @@ Modern CPU and GPU architectures are optimized for fundamentally different perfo
 
 * **CPU Philosophy (Latency-Oriented):** 
   * Optimizes the execution speed of a *single instruction stream*.
-  * Spends significant chip area on large caches (to minimize memory latency), sophisticated branch prediction (to avoid instruction stalls), and complex out-of-order execution pipelines.
+  * Spends significant chip area on large caches (to minimize memory latency), sophisticated branch prediction（复杂的分支预测） (to avoid instruction stalls), and complex out-of-order execution pipelines.
   * Supported hardware thread contexts per core are low (usually $2$, e.g., Intel Hyper-Threading).
 * **GPU Philosophy (Throughput-Oriented):**
   * Optimizes the *total volume of work completed per unit time*.
