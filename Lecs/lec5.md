@@ -30,7 +30,11 @@ Spawning tiny subproblems: Spawn overhead dominates parallel speedup; solved wit
 ##  High-Level Design Takeaways（要点） for Parallel System Builders
 
 Leverage static knowledge of workload first to minimize dynamic scheduling overhead; dynamic/work stealing is a fallback for unpredictable work.
+
 Good parallel runtimes separate parallel abstraction (cilk_spawn/cilk_sync) from low-level scheduling implementation—programmers express potential parallelism without managing threads manually.
+
 Locality-aware scheduling (work stealing from deque head/tail) balances load and preserves CPU cache performance.
+
 Greedy join scheduling eliminates wasted idle time at synchronization barriers, a major source of lost parallel throughput.
+
 Parallel slack (more tasks than cores) is necessary for load balance, but task granularity must be tuned to avoid synchronization overhead.
